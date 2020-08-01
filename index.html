@@ -21,11 +21,10 @@
       media="screen"
       href="stylesheet.css"
     />
-    <script src="app.js"></script>
   </head>
   <body>
-    <h1>To Do list</h1>
-    <table class="table">
+    <h>To Do list</h1>
+    <table id="table" class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -45,11 +44,12 @@
         </tr>
       </tbody>
     </table>
-    <form>
+    <form id="form">
       <div class="form-group row">
         <label for="task" class="col-sm-1 col-form-label">Task</label>
         <div class="col-sm-3">
           <input
+            id="task"
             type="text"
             class="form-control"
             placeholder="write your task"
@@ -61,16 +61,17 @@
         <!-- need to add js to determine today's date as the min date -->
         <div class="col-sm-3">
           <input
+            id="dueDate"
             type="date"
             min="2020-08-01"
             class="form-control"
-            placeholder="write your task"
           />
         </div>
       </div>
       <div class="col-auto">
-        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        <button id="submit" type="button" class="btn btn-primary mb-2">Submit</button>
       </div>
     </form>
   </body>
+  <script src="app.js"></script>
 </html>
