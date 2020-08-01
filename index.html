@@ -24,6 +24,7 @@
     <script src="app.js"></script>
   </head>
   <body>
+    <h1>To Do list</h1>
     <table class="table">
       <thead>
         <tr>
@@ -44,5 +45,32 @@
         </tr>
       </tbody>
     </table>
+    <form>
+      <div class="form-group row">
+        <label for="task" class="col-sm-1 col-form-label">Task</label>
+        <div class="col-sm-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="write your task"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="datemin" class="col-sm-1 col-form-label">Due Date</label>
+        <!-- need to add js to determine today's date as the min date -->
+        <div class="col-sm-3">
+          <input
+            type="date"
+            min="2020-08-01"
+            class="form-control"
+            placeholder="write your task"
+          />
+        </div>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </div>
+    </form>
   </body>
 </html>
