@@ -20,7 +20,7 @@ const taskInsert = () => {
     cellNumber.innerHTML = "number";
     cellTask.innerHTML = task.value;
     //  to display date in this format YYYY-MM-DD
-    cellDateAdded.innerHTML = `${date.getFullYear()}-${date.getMonth()}`;
+    cellDateAdded.innerHTML = `${moment().format("YYYY-MM-DD")}`;
     cellDueDate.innerHTML = dueDate.value;
     cellDoneBox.innerHTML = doneBox;
     cellDelete.innerHTML = dltButton;
@@ -38,3 +38,4 @@ const taskDelete = () => {
   tr.parentNode.removeChild(tr);
 };
 submit.addEventListener("click", taskInsert);
+// console.log(moment.format());
